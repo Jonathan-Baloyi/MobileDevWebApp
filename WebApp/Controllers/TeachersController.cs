@@ -9,56 +9,55 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-
     [Route("api/[controller]")]
-    public class SubjectController : Controller
+    public class TeachersController : Controller
     {
 
         private SchoolContext context;
 
-        public SubjectController(SchoolContext _context)
+        public TeachersController(SchoolContext _context)
         {
             this.context = _context;
-            
+
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Subjects> Get()
+        public IEnumerable<Teachers> Get()
         {
-            return context.Subjects.ToList();
+            return context.Teachers.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Subjects Get(int id)
+        public Teachers Get(int id)
         {
-            return context.Subjects.Find(id);
+            return context.Teachers.Find(id);
         }
 
         // POST api/values
         [HttpPost]
-        public Subjects Post([FromBody] Subjects subjects)
+        public Teachers Post([FromBody] Teachers teachers)
         {
-            context.Subjects.Add(subjects);
+            context.Teachers.Add(teachers);
             context.SaveChanges();
-            return subjects;
+            return teachers;
 
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public Subjects Put(int id, [FromBody] Subjects subjects)
+        public Teachers Put(int id, [FromBody] Teachers teachers)
         {
-            if(id != subjects.Id)
+            if (id != teachers.Id)
             {
                 throw new Exception("invalid operation");
             }
 
-            context.Subjects.Update(subjects);
+            context.Teachers.Update(teachers);
             context.SaveChanges();
 
-            return subjects;
+            return teachers;
 
         }
 
@@ -66,8 +65,8 @@ namespace WebApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var subject = context.Subjects.Find(id);
-            context.Subjects.Remove(subject);
+            var teacher = context.Teachers.Find(id);
+            context.Teachers.Remove(teacher);
             context.SaveChanges();
 
         }

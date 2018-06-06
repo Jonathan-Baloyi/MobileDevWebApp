@@ -9,56 +9,55 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-
     [Route("api/[controller]")]
-    public class SubjectController : Controller
+    public class GradesController : Controller
     {
 
         private SchoolContext context;
 
-        public SubjectController(SchoolContext _context)
+        public GradesController(SchoolContext _context)
         {
             this.context = _context;
-            
+
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Subjects> Get()
+        public IEnumerable<Grades> Get()
         {
-            return context.Subjects.ToList();
+            return context.Grades.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Subjects Get(int id)
+        public Grades Get(int id)
         {
-            return context.Subjects.Find(id);
+            return context.Grades.Find(id);
         }
 
         // POST api/values
         [HttpPost]
-        public Subjects Post([FromBody] Subjects subjects)
+        public Grades Post([FromBody] Grades grades)
         {
-            context.Subjects.Add(subjects);
+            context.Grades.Add(grades);
             context.SaveChanges();
-            return subjects;
+            return grades;
 
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public Subjects Put(int id, [FromBody] Subjects subjects)
+        public Grades Put(int id, [FromBody] Grades grades)
         {
-            if(id != subjects.Id)
+            if (id != grades.Id)
             {
                 throw new Exception("invalid operation");
             }
 
-            context.Subjects.Update(subjects);
+            context.Grades.Update(grades);
             context.SaveChanges();
 
-            return subjects;
+            return grades;
 
         }
 
@@ -66,8 +65,8 @@ namespace WebApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var subject = context.Subjects.Find(id);
-            context.Subjects.Remove(subject);
+            var grade = context.Grades.Find(id);
+            context.Grades.Remove(grade);
             context.SaveChanges();
 
         }

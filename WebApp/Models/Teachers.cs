@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApp.Models;
 
-namespace WebApp.Controllers
+namespace WebApp.Models
 {
     public class Teachers
     {
@@ -12,7 +12,7 @@ namespace WebApp.Controllers
         public string Name { get; set; }
         public string Surname { get; set; }
         public Address Address { get; set; }
-        public ClassLevel ClassLevel { get; set; }
-
+        public List<Subjects> Subjects { get; set; }
+        public List<ClassLevel> ClassLevels { get; set; }
     }
 }

@@ -11,7 +11,8 @@ namespace WebApp.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public Address Address { get; set; }
-        public Subjects Subjects { get; set; }
-        public Grades Grades { get; set; }
+        public List<Subjects> Subjects { get; set; }
+        public int ClassLevelId { get; set; }
+
     }
 }

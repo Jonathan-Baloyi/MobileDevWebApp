@@ -8,8 +8,9 @@ namespace WebApp.Models
     public class Grades
     {
         public int Id { get; set; }
-        public Subjects Subjects { get; set; }
-        public int Score { get; set; }
-        public TestType TestType { get; set; }
+        public double Score { get; set; }
+        public int TestTypeId { get; set; }
+        public int StudentId { get; set; }
+
     }
 }

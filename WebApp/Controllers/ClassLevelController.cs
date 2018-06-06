@@ -9,56 +9,55 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-
-    [Route("api/[controller]")]
-    public class SubjectController : Controller
+    [Route("api/class")]
+    public class ClassLevelController : Controller
     {
 
         private SchoolContext context;
 
-        public SubjectController(SchoolContext _context)
+        public ClassLevelController(SchoolContext _context)
         {
             this.context = _context;
-            
+
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Subjects> Get()
+        public IEnumerable<ClassLevel> Get()
         {
-            return context.Subjects.ToList();
+            return context.ClassLevels.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Subjects Get(int id)
+        public ClassLevel Get(int id)
         {
-            return context.Subjects.Find(id);
+            return context.ClassLevels.Find(id);
         }
 
         // POST api/values
         [HttpPost]
-        public Subjects Post([FromBody] Subjects subjects)
+        public ClassLevel Post([FromBody] ClassLevel ClassLevels)
         {
-            context.Subjects.Add(subjects);
+            context.ClassLevels.Add(ClassLevels);
             context.SaveChanges();
-            return subjects;
+            return ClassLevels;
 
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public Subjects Put(int id, [FromBody] Subjects subjects)
+        public ClassLevel Put(int id, [FromBody] ClassLevel ClassLevels)
         {
-            if(id != subjects.Id)
+            if (id != ClassLevels.Id)
             {
                 throw new Exception("invalid operation");
             }
 
-            context.Subjects.Update(subjects);
+            context.ClassLevels.Update(ClassLevels);
             context.SaveChanges();
 
-            return subjects;
+            return ClassLevels;
 
         }
 
@@ -66,8 +65,8 @@ namespace WebApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var subject = context.Subjects.Find(id);
-            context.Subjects.Remove(subject);
+            var level = context.ClassLevels.Find(id);
+            context.ClassLevels.Remove(level);
             context.SaveChanges();
 
         }

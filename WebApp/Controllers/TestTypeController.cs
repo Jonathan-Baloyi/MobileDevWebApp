@@ -9,56 +9,55 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
-
     [Route("api/[controller]")]
-    public class SubjectController : Controller
+    public class TestTypeController : Controller
     {
 
         private SchoolContext context;
 
-        public SubjectController(SchoolContext _context)
+        public TestTypeController(SchoolContext _context)
         {
             this.context = _context;
-            
+
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Subjects> Get()
+        public IEnumerable<TestType> Get()
         {
-            return context.Subjects.ToList();
+            return context.TestTypes.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Subjects Get(int id)
+        public TestType Get(int id)
         {
-            return context.Subjects.Find(id);
+            return context.TestTypes.Find(id);
         }
 
         // POST api/values
         [HttpPost]
-        public Subjects Post([FromBody] Subjects subjects)
+        public TestType Post([FromBody] TestType testTypes)
         {
-            context.Subjects.Add(subjects);
+            context.TestTypes.Add(testTypes);
             context.SaveChanges();
-            return subjects;
+            return testTypes;
 
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public Subjects Put(int id, [FromBody] Subjects subjects)
+        public TestType Put(int id, [FromBody] TestType testTypes)
         {
-            if(id != subjects.Id)
+            if (id != testTypes.Id)
             {
                 throw new Exception("invalid operation");
             }
 
-            context.Subjects.Update(subjects);
+            context.TestTypes.Update(testTypes);
             context.SaveChanges();
 
-            return subjects;
+            return testTypes;
 
         }
 
@@ -66,8 +65,8 @@ namespace WebApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var subject = context.Subjects.Find(id);
-            context.Subjects.Remove(subject);
+            var testType = context.TestTypes.Find(id);
+            context.TestTypes.Remove(testType);
             context.SaveChanges();
 
         }

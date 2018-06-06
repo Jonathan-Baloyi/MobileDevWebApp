@@ -8,8 +8,10 @@ namespace WebApp.Models
     public class TestType
     {
         public int Id { get; set; }
+        public int SubjectId { get; set; }
         public string Name { get; set; }
         public DateTime DateWritten { get; set; }
-        public int total { get; set; }
+        public double Total { get; set; }
+        public double Duration { get; set; }
     }
 }
