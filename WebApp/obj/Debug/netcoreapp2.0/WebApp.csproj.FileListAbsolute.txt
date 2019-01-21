@@ -20,3 +20,14 @@ C:\PersonalProject\MobileDev\WebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.Assemb
 C:\PersonalProject\MobileDev\WebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
 C:\PersonalProject\MobileDev\WebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.dll
 C:\PersonalProject\MobileDev\WebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.pdb
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\bin\Debug\netcoreapp2.0\WebApp.deps.json
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.json
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\bin\Debug\netcoreapp2.0\WebApp.dll
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\bin\Debug\netcoreapp2.0\WebApp.pdb
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.csprojAssemblyReference.cache
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.dll
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp\obj\Debug\netcoreapp2.0\WebApp.pdb

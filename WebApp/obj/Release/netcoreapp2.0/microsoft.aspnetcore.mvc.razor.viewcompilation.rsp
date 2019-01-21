@@ -1,0 +1,5 @@
+C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=WebApp
+--content-root=C:\PersonalProject\MobileDev\MobileDevWebApp\WebApp
+--file=
